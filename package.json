@@ -4,7 +4,9 @@
   "description": "Implementation of typical tasks using OOP / FP",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "lint": "eslint . --ext .js, .ts && prettier --check .",
+    "lint:fix": "eslint . --fix --ext .js,.ts && prettier --write ."
   },
   "repository": {
     "type": "git",
