@@ -20,7 +20,13 @@
   },
   "homepage": "https://github.com/parkers12/otus-homework-10#readme",
   "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^26.1.0",
     "husky": "^7.0.4",
     "jest": "^27.5.0",
     "lint-staged": "^12.3.3",
@@ -30,7 +36,10 @@
     "webpack-cli": "^4.9.2"
   },
   "lint-staged": {
-    "*.{js,}": "eslint --fix",
-    "*.{js,css,md,json}": "prettier --write"
+    "*.js": [
+      "prettier --write",
+      "eslint --fix --ext .js,.ts"
+    ],
+    "*.{css,md,json}": "prettier --write"
   }
 }
