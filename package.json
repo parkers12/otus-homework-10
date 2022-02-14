@@ -7,7 +7,9 @@
     "test": "jest --coverage",
     "lint": "eslint src && prettier --check src",
     "lint:fix": "eslint . --fix src && prettier --write src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "webpack serve --node-env development",
+    "build": "webpack --node-env production"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "@typescript-eslint/parser": "^5.11.0",
     "babel": "^6.23.0",
     "babel-jest": "^27.5.0",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -36,9 +39,11 @@
     "jest": "^27.5.0",
     "lint-staged": "^12.3.3",
     "prettier": "2.5.1",
+    "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
     "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "husky": {
     "hooks": {

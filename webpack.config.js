@@ -1,10 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: path.resolve(__dirname, "./src/index.ts"),
+  },
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -22,5 +24,13 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dev"),
+    },
+    compress: true,
+    port: 9000,
+    hot: true,
   },
 };
