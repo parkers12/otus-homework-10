@@ -34,6 +34,6 @@ describe("Test function totalSum", () => {
             "1.23.45",
             "2.5.0"
         ];
-        expect(semverSort(arr)).toBe(arrRes);
+        expect(semverSort(arr)).toStrictEqual(arrRes);
     });
 });
