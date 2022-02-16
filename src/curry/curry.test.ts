@@ -1,7 +1,9 @@
-import { hof, totalSum } from "./curry";
+import { curry, sum } from "./curry";
 
 describe("Test function hof", () => {
+    let hof: (...args: number[]) => any;
     beforeEach(() => {
+        hof = curry(sum);
     });
 
     test("Get an array of live cells", () => {
@@ -27,6 +29,6 @@ describe("Test function hof", () => {
 
 describe("Test function totalSum", () => {
     test("Get an array of live cells", () => {
-        expect(totalSum(1,2,3,4,5)).toBe(15);
+        expect(sum(1,2,3,4,5)).toBe(15);
     });
 });

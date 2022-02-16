@@ -1,10 +1,9 @@
-export const totalSum = (...args: any[]) =>
-  args.reduce((acc, cur) => acc + cur);
+export const sum = (...args: number[]) =>
+  args.reduce((acc, cur) => acc + cur, 0);
 
-
-export function curry(func: any) {
+export function curry(func: Function) {
   let argsArray: number[] = [];
-  return function curried(...args: any[]) {
+  return function curried(this: any, ...args: number[]): any {
     let res;
     if (args.length === 0) {
       res = func(...argsArray);
@@ -18,4 +17,4 @@ export function curry(func: any) {
   }
 }
 
-export const hof = curry(totalSum);
+export const hof = curry(sum);
