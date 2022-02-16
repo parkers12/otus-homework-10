@@ -10,7 +10,7 @@ describe("Test function spiral", () => {
         ];
         const arrRes =
         [0, 1, 2, 3, 4, 9, 14, 19, 18, 17, 16, 15, 10, 5, 6, 7, 8, 13, 12, 11];
-        expect(spiral(arr)).toBe(arrRes);
+        expect(spiral(arr)).toStrictEqual(arrRes);
     });
 
     test("Row 2 Col 5", () => {
@@ -19,7 +19,7 @@ describe("Test function spiral", () => {
             [5,  6,  7,  8,  9]
         ];
         const arrRes = [0, 1, 2, 3, 4, 9, 8, 7, 6, 5];
-        expect(spiral(arr)).toBe(arrRes);
+        expect(spiral(arr)).toStrictEqual(arrRes);
     });
 
     test("Row 7 Col 2", () => {
@@ -33,6 +33,6 @@ describe("Test function spiral", () => {
             [10, 11]
         ];
         const arrRes = [0, 1, 6, 11, 16, 14, 6, 11, 10, 5, 0, 15, 10, 5];
-        expect(spiral(arr)).toBe(arrRes);
+        expect(spiral(arr)).toStrictEqual(arrRes);
     });
 });
