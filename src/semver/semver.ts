@@ -10,8 +10,8 @@ export function compareNumeric(a:string, b:string): number {
 
     let res = 0;
     for (let x = 0; x < dataLength; x += 1) {
-        const aNum: number = Number(aParts[x]);
-        const bNum: number = Number(bParts[x]);
+        const aNum = Number(aParts[x]);
+        const bNum = Number(bParts[x]);
         if (Number.isNaN(bNum) || aNum > bNum) {
             res = 1;
             break;
