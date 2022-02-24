@@ -2,14 +2,14 @@ export default function spiral(arr: number[][]): number[] {
     let arrRes: number[] = [];
     const row = arr.length;
     const col = arr[0].length;
-    let par:number = 0;
+    let par = 0;
     if(row <= col) {
       par = row * 2 - 1;
     } else {
       par = col * 2;
     }
 
-    let side: string = "top";
+    let side = "top";
     for(let i = 0; i < par; i += 1){
       const circus: number = Math.ceil((i + 1) / 4);
       switch (side) {
