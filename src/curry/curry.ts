@@ -50,8 +50,8 @@ export function curry(func: (...args: any[]) => any): any {
     if (args.length >= arrLn) {
       return func(...args);
     }
-    return  function pass(...args2: any[]) {
+    return function pass(...args2: any[]) {
       return curried(...args.concat(args2));
-    }
-  }
+    };
+  };
 }

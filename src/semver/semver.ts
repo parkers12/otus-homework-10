@@ -1,11 +1,11 @@
-export function compareNumeric(a:string, b:string): number {
-  const aParts = a.split('.');
-  const bParts = b.split('.');
+export function compareNumeric(a: string, b: string): number {
+  const aParts = a.split(".");
+  const bParts = b.split(".");
   let dataLength = 0;
-  if(aParts.length < bParts.length) {
+  if (aParts.length < bParts.length) {
     dataLength = bParts.length;
   } else {
-    dataLength = aParts.length; 
+    dataLength = aParts.length;
   }
 
   let res = 0;
@@ -23,8 +23,8 @@ export function compareNumeric(a:string, b:string): number {
     }
   }
   return res;
-} 
-  
+}
+
 export function semverSort(arr: string[]) {
   return arr.sort(compareNumeric);
 }

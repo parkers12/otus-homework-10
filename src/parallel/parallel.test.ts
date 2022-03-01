@@ -2,27 +2,32 @@ import Parallel from "./parallel";
 
 describe("Test function Parallel", () => {
   const jobs: (() => Promise<number>)[] = [
-    () => new Promise((resolve) => {
-      setTimeout(resolve, 10, 1);
-    }),
-    () => new Promise((resolve) => {
-      setTimeout(resolve, 40, 2);
-    }),
-    () => new Promise((resolve) => {
-      setTimeout(resolve, 20, 3);
-    }),
-    () => new Promise((resolve) => {
-      setTimeout(resolve, 90, 4);
-    }),
-    () => new Promise((resolve) => {
-      setTimeout(resolve, 30, 5);
-    })
+    () =>
+      new Promise((resolve) => {
+        setTimeout(resolve, 10, 1);
+      }),
+    () =>
+      new Promise((resolve) => {
+        setTimeout(resolve, 40, 2);
+      }),
+    () =>
+      new Promise((resolve) => {
+        setTimeout(resolve, 20, 3);
+      }),
+    () =>
+      new Promise((resolve) => {
+        setTimeout(resolve, 90, 4);
+      }),
+    () =>
+      new Promise((resolve) => {
+        setTimeout(resolve, 30, 5);
+      }),
   ];
 
   test("It's a function", async () => {
     const runner = new Parallel(2);
-      expect(typeof runner.jobs).toBe("function");
-    });
+    expect(typeof runner.jobs).toBe("function");
+  });
 
   test("Return array 2 streams", async () => {
     const runner = new Parallel(2);

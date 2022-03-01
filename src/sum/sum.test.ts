@@ -29,7 +29,7 @@ describe("Test function sum", () => {
     const res = +s3(5);
     expect(res).toBe(8);
   });
-  
+
   test("Get an array of live cells", () => {
     const s3 = sum(3);
     const res = +s3(6);

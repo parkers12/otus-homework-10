@@ -23,7 +23,7 @@ describe("Test function totalSum", () => {
       "1",
       "1.23.45",
       "1.4.50",
-      "1.2.3.4.5.6.7"
+      "1.2.3.4.5.6.7",
     ];
     const arrRes = [
       "0.12.0",
@@ -32,7 +32,7 @@ describe("Test function totalSum", () => {
       "1.2.3.4.5.6.7",
       "1.4.50",
       "1.23.45",
-      "2.5.0"
+      "2.5.0",
     ];
     expect(semverSort(arr)).toStrictEqual(arrRes);
   });

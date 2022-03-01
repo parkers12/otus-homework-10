@@ -1,13 +1,8 @@
 import { curry } from "./curry";
 
 describe("Test function hof", () => {
-  const sum = (
-    a: number,
-    b: number,
-    c: number,
-    d: number,
-    e: number
-  ) => a + b + c + d + e;
+  const sum = (a: number, b: number, c: number, d: number, e: number) =>
+    a + b + c + d + e;
 
   const hof = curry(sum);
 
